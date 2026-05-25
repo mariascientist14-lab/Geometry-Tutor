@@ -1,0 +1,35 @@
+function checkProQuiz(){
+
+let score=0;
+
+let p1=parseFloat(document.getElementById("pro1").value);
+let p2=parseFloat(document.getElementById("pro2").value);
+let p3=parseFloat(document.getElementById("pro3").value);
+
+let result="";
+
+if(p1===28){
+score++;
+result+="✅ Question 1 Correct!\n";
+}else{
+result+="❌ Question 1 Wrong. Answer: 28\n";
+}
+
+if(p2===43.96){
+score++;
+result+="✅ Question 2 Correct!\n";
+}else{
+result+="❌ Question 2 Wrong. Answer: 43.96\n";
+}
+
+if(p3===35){
+score++;
+result+="✅ Question 3 Correct!\n";
+}else{
+result+="❌ Question 3 Wrong. Answer: 35\n";
+}
+
+result+=`\n💎 Pro Score: ${score}/3`;
+
+document.getElementById("proOutput").innerText=result;
+}
